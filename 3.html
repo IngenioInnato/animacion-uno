@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change background body infinite</title>
+<!-- http://jsfiddle.net/181wzf9w/2/ -->
+    <style>
+    body {
+        text-align: center;
+        animation-name: fade-bg;
+        -webkit-animation-name: fade-bg;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;    
+        -webkit-animation-play-state: running;
+        animation-name: fade-bg;
+        animation-duration: 20s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;    
+        animation-play-state: running;
+    }
+    .logo{
+        margin-top: 10vh;
+        width: 400px;
+        cursor: pointer;
+        border-radius: 200px;
+        -webkit-transition: -webkit-transform .25s ease;
+        -moz-transition: -moz-transform .25s ease;
+        -o-transition: -o-transform .25s ease;
+        -ms-transition: -ms-transform .25s ease;
+        transition: .25s ease;
+    }        
+    .logo:hover {
+        box-shadow: 32px 2px 2px rgba(0,0,0,0.5 );
+        -webkit-transform: scale(1.05,1.05);
+        -moz-transform: scale(1.05,1.05);
+        -o-transform: scale(1.05,1.05);
+        -ms-transform: scale(1.05,1.05);
+        transform: scale(1.05,1.05);
+    }
+    @keyframes fade-bg {
+        0% {
+            background: #4cc7bf;
+        }
+        20% {
+            background: #53606d;
+        }
+
+        40% {
+            background:#c2ed62;
+        }
+
+        60% {
+            background: #f86868;
+        }
+
+        80% {
+            background: #c04b55;
+        }
+
+        100% {
+            background: #4cc7bf;
+        }
+    }
+    @media (max-width: 991.98px) { 
+        .logo{
+            animation-name: touch-me;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;    
+            animation-play-state: running;
+        }
+        @keyframes touch-me {
+            0% {
+                transform: scale(1.0,1.0);
+            }
+            50% {
+                transform: scale(1.2,1.2);
+            }
+            100% {
+                transform: scale(1.0,1.0);
+
+            }
+        }
+    }
+    </style>
+</head>
+<body>
+    <img src="./ii.jpg" alt="Ingenio Innato" class="logo">
+</body>
+</html>
